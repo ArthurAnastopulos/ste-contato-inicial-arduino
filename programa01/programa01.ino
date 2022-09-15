@@ -13,17 +13,16 @@ State_t state = OFF;
 void botao_isr()
 {
   static unsigned long ultima_interrupcao = 0;
-  static unsigned long tempo_botao = 50;
+  static unsigned long tempo_botao = 25;
 
   unsigned long agora = millis();
 
   if ((agora - ultima_interrupcao) >= tempo_botao )
   {
-    Serial.println("b1");
+    Serial.println("b");
     botao = 1;
     ultima_interrupcao = agora;
   }
-  //Serial.println("b2");
 }
 
 void setup()
@@ -96,5 +95,5 @@ void loop()
   // Atualiza saídas
   digitalWrite(13, led);
 
-  delay(50);
+  delay(25);
 }
