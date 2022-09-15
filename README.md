@@ -14,9 +14,11 @@ Utilize o kit com Arduino entregue a você para implementar dois programas com a
 Dica 1: esta solução foi feita em aula. Reaproveite as informações/código desenvolvidos com o professor e organize sua entrega.
 ### Documentação: Programa 1 - Interruptor LED
 
-Para o Primeiro Programa foi desenvolvido um sistema de Interruptor LED, foi utilizada a solução feita em aula como base. Onde o circuito do sistema segue na imagem a seguir:
+Para o Primeiro Programa foi desenvolvido um sistema de Interruptor LED, foi utilizada a solução feita em aula como base. Onde o circuito e esquema Elétrico do sistema segue nas imagems a seguir:
 
 ![Circuito01](/images/circuito1.png)
+
+![Esquema01](/images/esquemaEletrico1.png)
 
 Para este circuito foram utilizados os seguintes componentes:
 * Entrada: Interruptor (botão);
@@ -34,6 +36,7 @@ Como visto na imagem esta possui 4 Estados:
 * **E1**: Que representa o estado intermediário de OFF para ON, neste momento já acionado o LED;
 * **ON**: Que representa o estado do LED ligado;
 * **E2**: Que representa o estado intermediário de ON para OFF, neste momento já acionado o LED
+
 ## Programa 2 - Voltímetro Digital
 
 Documente a solução e implemente um voltímetro digital, conforme debatido em sala de aula. O sistema embarcado desenvolvido deve ter as seguintes propriedades:
@@ -43,3 +46,23 @@ Documente a solução e implemente um voltímetro digital, conforme debatido em 
 * A saída serial deve atualizar o valor de tensão medido no potenciômetro a cada 500ms.
 * O botão scale deve alternar, cada vez que é pressionado, a resolução do valor de tensão entre V (volts) e mV (milivolts). O comportamento deste botão é similar ao "interruptor" do programa 1.
 * O botão hold deve suspender a atualização da saída, ou seja, se o botão estiver pressionado, o voltímetro para de atualizar a saída serial. Se não estiver pressionado, a saída é atualizada normalmente.
+
+### Documentação: Programa 2 - Voltímetro Digital
+
+Para o Segundo Programa foi desenvolvido um sistema de Interruptor LED, foi utilizada as  discussões feitas em aula como base. Onde o circuito e esquema Elétrico do sistema segue nas imagems a seguir:
+
+![Circuito02](/images/circuito2.png)
+
+![Esquema01](/images/esquemaEletrico2.png)
+
+Já sua Máquina de Estado,também utilizando como base a solução feita em aula. Possui o seguinte modelo:
+
+![State02](/images/StateMachine2.png)
+
+Como visto na imagem esta possui 5 Estados:
+
+* **Wait**: Estado inicial de espera enquanto o valor do delay/timer não for atingido;
+* **E1**: Que representa o estado intermediário ao valor chegar no temer/delay;
+* **V**: Que representa o estado de escala Volts;
+* **mV**: Que representa o estado de escala Milivolts;
+* **E2**: Que representa o estado intermediário de pausa enquanto o hold estiver precionado.

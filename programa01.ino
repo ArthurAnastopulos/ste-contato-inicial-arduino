@@ -54,7 +54,7 @@ void loop()
       {
         state = E1;
         Serial.println("E1");
-        attachInterrupt(digitalPinToInterrupt(2), botao_isr, LOW);
+        attachInterrupt(digitalPinToInterrupt(2), botao_isr, FALLING);
         led = 1;
       }
       break;
@@ -74,7 +74,7 @@ void loop()
       {
         state = E2;
         Serial.println("E2");
-        attachInterrupt(digitalPinToInterrupt(2), botao_isr, LOW);
+        attachInterrupt(digitalPinToInterrupt(2), botao_isr, FALLING);
         led = 0;
       }
       break;
